@@ -1034,6 +1034,181 @@ footer {
     text-align: center;
 }
 
+@media only screen and (min-width: 530px) {
+
+    /*------------------------------------------ LABELS ------------------------------------------*/
+
+    .labels {
+        height: 700px;
+    }
+
+    .labels>div {
+        font-size: 0.7rem;
+    }
+
+    .sc_label:nth-child(1) {
+        top: 5.5em;
+        left: 50%;
+    }
+
+    .sc_label:nth-child(2) {
+        top: 13em;
+        left: 23%;
+    }
+
+    .sc_label:nth-child(3) {
+        top: 13em;
+        right: 23%;
+    }
+
+    .sc_label:nth-child(4) {
+        top: 27em;
+        right: 14%;
+    }
+
+    .sc_label:nth-child(5) {
+        top: 27em;
+        left: 14%;
+    }
+
+    .sc_label.center {
+        height: 17em;
+        width: 17em;
+        padding: 2em;
+    }
+
+    .sc_label.center p {
+        font-size: 1.5em;
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
+    .hero {
+        font-size: 1.3rem;
+    }
+
+    article.sc_type {
+        flex-basis: 500px;
+    }
+
+    /*------------------------------------------ WORK ------------------------------------------*/
+
+    .work {
+        display: flex;
+        flex-direction: column;
+        gap: 3em;
+    }
+
+    .work__wrap {
+        row-gap: 6em;
+        column-gap: 3em;
+        max-width: 2600px;
+        margin: 0 auto;
+    }
+
+    .sc_work {
+        display: flex;
+        min-height: 18rem;
+        max-height: 18rem;
+        width: 100%;
+        max-width: 1200px;
+    }
+
+    .sc_work__img__imgwrap {
+        max-width: 250px;
+        background-size: contain;
+    }
+
+    .sc_work__img__imgwrap.--even {
+        right: 0;
+    }
+
+    .sc_work__img__imgwrap.--odd {
+        left: 0;
+    }
+
+    .sc_work__img__imgwrap.--document_scanner {
+        background-image: url(../images/work/document_scanner.svg);
+    }
+
+    .sc_work__img__imgwrap.--fluorescent {
+        background-image: url(../images/work/fluorescent.svg);
+    }
+
+    .sc_work__img__imgwrap.--focus_lens {
+        background-image: url(../images/work/focus_lens.svg);
+    }
+
+    .sc_work__text {
+        width: 70%;
+        background-color: var(--neutro);
+    }
+
+    .sc_work__text.--odd {
+        justify-content: flex-start;
+        text-align: left;
+    }
+
+    .sc_work__text.--even {
+        justify-content: flex-end;
+        text-align: right;
+    }
+
+    /*------------------------------------------ LABELS ------------------------------------------*/
+
+    .labels {
+        height: 800px;
+    }
+
+    .labels>div {
+        font-size: 0.8rem;
+    }
+
+    .sc_label:nth-child(2) {
+        top: 13em;
+        left: 23%;
+    }
+
+    .sc_label:nth-child(3) {
+        top: 13em;
+        right: 23%;
+    }
+
+    .sc_label:nth-child(4) {
+        top: 27em;
+        right: 12%;
+    }
+
+    .sc_label:nth-child(5) {
+        top: 27em;
+        left: 12%;
+    }
+
+    .sc_label.center {
+        top: 24em;
+    }
+
+    /*------------------------------------------ BUY ------------------------------------------*/
+
+    .--hide_mob {
+        display: block;
+    }
+
+    .--hide_tab {
+        display: none;
+    }
+
+    /*------------------------------------------ CONCLUSION ------------------------------------------*/
+
+    .conclusion__text {
+        width: 60%;
+        min-width: 594px;
+        max-width: 713px;
+    }
+
+}
+
 @media only screen and (min-width: 1024px) {
 
     /*------------------------------------------ GRID LAYOUT ------------------------------------------*/
@@ -1351,4 +1526,32 @@ footer {
         text-align: left;
     }
 
+}
+
+@media only screen and (min-width: 1440px) {
+
+    .nav__menu {
+        justify-content: left;
+    }
+
+    .nav__menu a:not(.icon) {
+        flex-basis: auto;
+    }
+
+    /*------------------------------------------ BUY ------------------------------------------*/
+
+    .--hide_mob {
+        display: block;
+    }
+
+    .--hide_tab {
+        display: block;
+    }
+
+}
+
+@media only screen and (min-width: 1600px) {
+    article.sc_type {
+        flex-basis: 320px;
+    }
 }
