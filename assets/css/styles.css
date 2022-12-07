@@ -167,7 +167,8 @@ p {
     grid-column: span 4;
 }
 
-#bibliography.wrapper main, #types.wrapper main {
+#bibliography.wrapper main,
+#types.wrapper main {
     display: block;
 }
 
@@ -498,8 +499,7 @@ article.sc_type.portable {
 
 .sc_type__text {
     position: absolute;
-    max-height: 150px;
-    max-height: max-content;
+    max-height: 100%;
     width: 100%;
     bottom: 0;
     padding: 1em;
@@ -510,18 +510,18 @@ article.sc_type.portable {
 
 .sc_type__text p {
     line-height: normal;
-    padding: 0.2em 0 0 0;
+    padding: 0.2em 0 1.1em 0;
     margin: 0 auto;
 }
 
-.sc_type__text p:last-child {
-    padding-top: 1.1em;
+.sc_type__text p:last-child,
+.types>p>a {
     color: #0275d8;
     font-weight: bold;
 }
 
-.sc_type__text p:last-child:hover {
-    padding-top: 1.1em;
+.sc_type__text p:last-child:hover,
+.types>p>a:hover {
     color: var(--dark);
     font-weight: bold;
 }
@@ -532,6 +532,10 @@ article.sc_type.portable {
     text-align: center;
     background-color: var(--light);
     padding: 5rem 5% 6rem 5%;
+}
+
+.work>div:first-child {
+    margin: 0 auto;
 }
 
 .work__wrap {
@@ -545,7 +549,6 @@ article.sc_type.portable {
 
 .sc_work {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, auto);
     gap: 2em;
     width: 100%;
@@ -555,7 +558,6 @@ article.sc_type.portable {
 
 .sc_work__img {
     grid-row: 1;
-    grid-column: span 4;
     height: 100%;
     width: 30%;
     margin: 0 auto;
@@ -604,7 +606,6 @@ article.sc_type.portable {
 
 .sc_work__text {
     grid-row: 2;
-    grid-column: span 4;
     display: flex;
     align-items: center;
     height: 100%;
@@ -1059,27 +1060,112 @@ footer {
     text-align: center;
 }
 
-/*------------------------------------------ BIBLIOGRAPHY & TYPES ------------------------------------------*/
+/*------------------------------------------ BIBLIOGRAPHY & TYPES NEW PAGES ------------------------------------------*/
 
-.main__bibliography,.main__types {
+.main__bibliography,
+.main__types {
     background-color: var(--neutro);
     height: 100%;
     width: 100%;
 }
 
-.main__bibliography h3, .main__types h1, .main__types h3 {
+.main__bibliography h3,
+.main__types h1,
+.main__types h3 {
     text-align: center;
 }
 
 .main__bibliography__biblio,
 .main__bibliography__img,
-.main__types__biblio,
-.main__types__img {
+.main__types__wrap,
+.main__types__wrap__article {
     width: 100%;
     max-width: 1500px;
     padding: 5rem 10%;
     margin: 0 auto;
 }
+
+/*-- TYPES PAGE --*/
+
+.types_page {
+    text-align: center;
+    background-color: var(--light);
+    padding: 5rem 5% 6rem 5%;
+}
+
+.types_page>div:first-child {
+    margin: 0 auto;
+}
+
+.types_page__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 3em;
+    width: 100%;
+    max-width: 2000px;
+    padding: 2rem 0;
+}
+
+.sc_types_page {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--light);
+}
+
+.sc_types_page__imgwrap {
+    grid-row: 1;
+    height: 16em;
+    width: 100%;
+    padding-bottom: 60%;
+    margin: 0 auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.sc_types_page__imgwrap h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: #232c3ba4;
+    color: white;
+    font-weight: normal;
+}
+
+.sc_types_page__imgwrap.--flatbed {
+    background-image: url(../images/types/flatbed.jpg);
+}
+
+.sc_types_page__imgwrap.--sheetfed {
+    background-image: url(../images/types/sheetfed.webp);
+}
+
+.sc_types_page__imgwrap.--drumscanner {
+    background-image: url(../images/types/drumscanner.webp);
+}
+
+.sc_types_page__imgwrap.--portable {
+    background-image: url(../images/types/portable.webp);
+}
+
+.sc_types_page__text {
+    grid-row: 2;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: var(--neutro);
+    padding: 1rem 5%;
+}
+
+.sc_types_page__text p {
+    padding: 0.5em 5%;
+}
+
 
 @media only screen and (min-width: 530px) {
 
@@ -1157,7 +1243,7 @@ footer {
     .sc_work {
         display: flex;
         min-height: 18rem;
-        max-height: 18rem;
+        height: auto;
         width: 100%;
         max-width: 1200px;
     }
@@ -1173,18 +1259,6 @@ footer {
 
     .sc_work__img__imgwrap.--odd {
         left: 0;
-    }
-
-    .sc_work__img__imgwrap.--document_scanner {
-        background-image: url(../images/work/document_scanner.svg);
-    }
-
-    .sc_work__img__imgwrap.--fluorescent {
-        background-image: url(../images/work/fluorescent.svg);
-    }
-
-    .sc_work__img__imgwrap.--focus_lens {
-        background-image: url(../images/work/focus_lens.svg);
     }
 
     .sc_work__text {
@@ -1256,9 +1330,69 @@ footer {
 
     /*------------------------------------------ BIBLIOGRAPHY & TYPES ------------------------------------------*/
 
-.main__bibliography h3, .main__types h3 {
-    text-align: left;
-}
+    .main__bibliography h3,
+    .main__types h3 {
+        text-align: left;
+    }
+
+    /*-- TYPES PAGE --*/
+
+    .types_page {
+        display: flex;
+        flex-direction: column;
+        gap: 3em;
+    }
+
+    .types_page__wrap {
+        row-gap: 6em;
+        column-gap: 3em;
+        max-width: 2600px;
+        margin: 0 auto;
+    }
+
+    .sc_types_page {
+        display: flex;
+        min-height: 18rem;
+        max-width: 1200px;
+    }
+
+    .sc_types_page__imgwrap {
+        height: 100%;
+        width: 40%;
+        max-width: 500px;
+        padding-bottom: 0;
+    }
+
+    .sc_types_page__imgwrap.--flatbed {
+        background-position-x: 70%;
+    }
+    
+    .sc_types_page__imgwrap.--portable {
+        background-position-x: 30%;
+    }
+
+    .sc_types_page__imgwrap.--even {
+        right: 0;
+    }
+
+    .sc_types_page__imgwrap.--odd {
+        left: 0;
+    }
+
+    .sc_types_page__text {
+        width: 70%;
+        background-color: var(--neutro);
+    }
+
+    .sc_types_page__text.--odd {
+        justify-content: flex-start;
+        text-align: left;
+    }
+
+    .sc_types_page__text.--even {
+        justify-content: flex-end;
+        text-align: right;
+    }
 
 }
 
@@ -1495,9 +1629,8 @@ footer {
     /*------------------------------------------ TYPES ------------------------------------------*/
 
     .sc_type__text {
-        bottom: -140px;
-        height: 140px;
-        max-height: 140px;
+        bottom: -200px;
+        height: auto;
         font-size: 1rem;
     }
 
