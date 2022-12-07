@@ -167,6 +167,10 @@ p {
     grid-column: span 4;
 }
 
+#bibliography.wrapper main, #types.wrapper main {
+    display: block;
+}
+
 .wrapper footer {
     grid-row: 5;
     grid-column: span 4;
@@ -476,20 +480,20 @@ article.sc_type a {
 }
 
 article.sc_type.flatbed {
-    background-image: url(../images/flatbed.jpg);
+    background-image: url(../images/types/flatbed.jpg);
 }
 
 article.sc_type.sheetfed {
-    background-image: url(../images/sheetfed.webp);
+    background-image: url(../images/types/sheetfed.webp);
 }
 
 article.sc_type.drum {
     background-position: top;
-    background-image: url(../images/drumscanner.webp);
+    background-image: url(../images/types/drumscanner.webp);
 }
 
 article.sc_type.portable {
-    background-image: url(../images/portable.webp);
+    background-image: url(../images/types/portable.webp);
 }
 
 .sc_type__text {
@@ -1055,6 +1059,28 @@ footer {
     text-align: center;
 }
 
+/*------------------------------------------ BIBLIOGRAPHY & TYPES ------------------------------------------*/
+
+.main__bibliography,.main__types {
+    background-color: var(--neutro);
+    height: 100%;
+    width: 100%;
+}
+
+.main__bibliography h3, .main__types h1, .main__types h3 {
+    text-align: center;
+}
+
+.main__bibliography__biblio,
+.main__bibliography__img,
+.main__types__biblio,
+.main__types__img {
+    width: 100%;
+    max-width: 1500px;
+    padding: 5rem 10%;
+    margin: 0 auto;
+}
+
 @media only screen and (min-width: 530px) {
 
     /*------------------------------------------ LABELS ------------------------------------------*/
@@ -1228,6 +1254,12 @@ footer {
         max-width: 713px;
     }
 
+    /*------------------------------------------ BIBLIOGRAPHY & TYPES ------------------------------------------*/
+
+.main__bibliography h3, .main__types h3 {
+    text-align: left;
+}
+
 }
 
 @media only screen and (min-width: 1024px) {
@@ -1394,7 +1426,7 @@ footer {
 
     .nav__menu a:nth-child(9) {
         margin-bottom: 0;
-    } 
+    }
 
     /*------------------------------------------ HERO SECTION ------------------------------------------*/
 
