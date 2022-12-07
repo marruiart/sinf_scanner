@@ -78,8 +78,8 @@ h1 {
 
 h2 {
     font-family: 'Titles', sans-serif;
-    font-size: 2.5rem;
-    padding-bottom: 2rem;
+    font-size: 2.5em;
+    /* padding-bottom: 2em; */
     letter-spacing: 1px;
     text-align: center;
 }
@@ -88,12 +88,6 @@ h3 {
     font-family: 'Titles', sans-serif;
     font-size: 1.5em;
     letter-spacing: 1px;
-}
-
-.subheader {
-    font-size: 1.9rem;
-    font-weight: bold;
-    margin: 0 auto;
 }
 
 /* OTHER STYLES */
@@ -407,7 +401,7 @@ nav {
     padding: 5rem 5% 6rem 5%;
     background-color: var(--dark);
     color: var(--light);
-    text-align: justify;
+    text-align: center;
 }
 
 .info__wrapper {
@@ -462,7 +456,7 @@ article.sc_type {
     background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 20rem;
+    height: 23rem;
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: 300px;
@@ -496,12 +490,32 @@ article.sc_type.portable {
 
 .sc_type__text {
     position: absolute;
-    max-height: 121px;
+    max-height: 150px;
+    max-height: max-content;
     width: 100%;
     bottom: 0;
     padding: 1em;
-    padding-bottom: 0;
     background-color: #f9f9f9e9;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.sc_type__text p {
+    line-height: normal;
+    padding: 0.2em 0 0 0;
+    margin: 0 auto;
+}
+
+.sc_type__text p:last-child {
+    padding-top: 1.1em;
+    color: #0275d8;
+    font-weight: bold;
+}
+
+.sc_type__text p:last-child:hover {
+    padding-top: 1.1em;
+    color: var(--dark);
+    font-weight: bold;
 }
 
 /*------------------------------------------ WORK ------------------------------------------*/
@@ -603,8 +617,7 @@ article.sc_type.portable {
     align-items: center;
     justify-content: center;
     padding: 5rem 5% 6rem 5%;
-    text-align: justify;
-    font-size: 1.2rem;
+    text-align: center;
     background-color: var(--neutro);
     background-image: url(../images/background-repeat.jpg);
     background-size: 600px;
@@ -620,6 +633,7 @@ article.sc_type.portable {
     padding: 2rem 0;
     width: 100%;
     max-width: 1300px;
+    font-size: 1.2rem;
 }
 
 .install__wrap__steps {
@@ -770,6 +784,7 @@ article.sc_type.portable {
 .sc_label.center p {
     font-size: 1.3em;
     color: var(--light);
+    line-height: normal;
 }
 
 .sc_label a {
@@ -852,7 +867,7 @@ article.sc_type.portable {
     width: 100%;
     padding: 4% 15%;
     text-align: right;
-    font-size: 1.3rem;
+    font-size: 1.3em;
     font-weight: bolder;
     color: #2f2f2f;
 }
@@ -901,14 +916,14 @@ article.sc_type.portable {
 }
 
 .conclusion h5 {
-    font-size: 1.2rem;
+    font-size: 1.2em;
     padding: 1rem 0;
     font-weight: lighter;
     text-transform: uppercase;
 }
 
 .conclusion h5 span {
-    font-size: 0.9rem;
+    font-size: 0.9em;
     color: var(--principal);
     padding: 1rem 0;
     font-weight: lighter;
@@ -1030,7 +1045,7 @@ footer {
     padding: 1rem 10%;
     color: #969ea7;
     background-color: #161c28;
-    font-size: 0.8rem;
+    font-size: 0.8em;
     text-align: center;
 }
 
@@ -1312,7 +1327,8 @@ footer {
     /*------------------------------------------ NAV MENU ------------------------------------------*/
 
     #sticky {
-        display: none; /*ARREGLAR*/
+        display: none;
+        /*ARREGLAR*/
         grid-template-columns: repeat(4, 1fr);
         width: 100%;
         position: fixed;
@@ -1422,7 +1438,7 @@ footer {
 
     .info {
         flex-direction: row;
-
+        text-align: left;
     }
 
     .info h2 {
@@ -1441,7 +1457,10 @@ footer {
     /*------------------------------------------ TYPES ------------------------------------------*/
 
     .sc_type__text {
-        bottom: -121px;
+        bottom: -140px;
+        height: 140px;
+        max-height: 140px;
+        font-size: 1rem;
     }
 
     .sc_type:hover .sc_type__text {
