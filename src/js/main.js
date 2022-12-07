@@ -25,10 +25,12 @@ function displayStep(num) {
 }
 
 window.onload = function () {
-  let menuIcon = document.getElementById("menu_icon");
-  menuIcon.addEventListener("click", displayMenu);
-  let navMenuAnchor = document.getElementsByClassName("nav__menu__a");
-  for (let i = 0; i < navMenuAnchor.length; i++) {
-    navMenuAnchor[i].addEventListener("click", displayMenu);
+  if (window.innerWidth < 1024) {
+    let menuIcon = document.getElementById("menu_icon");
+    menuIcon.addEventListener("click", displayMenu);
+    let navMenuAnchor = document.getElementsByClassName("nav__menu__a");
+    for (let i = 0; i < navMenuAnchor.length; i++) {
+      navMenuAnchor[i].addEventListener("click", displayMenu);
+    }
   }
 };

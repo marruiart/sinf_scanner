@@ -442,10 +442,14 @@ nav {
     background-color: var(--neutro);
 }
 
+.types h2 {
+    padding-bottom: 0.5em;
+}
+
 .types__wrap {
     display: flex;
     flex-wrap: wrap;
-    gap: 3rem;
+    gap: 3em;
     padding: 2rem 0;
     width: 100%;
     max-width: 2000px;
@@ -616,6 +620,7 @@ article.sc_type.portable {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 2em;
     padding: 5rem 5% 6rem 5%;
     text-align: center;
     background-color: var(--neutro);
@@ -629,7 +634,7 @@ article.sc_type.portable {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 2em;
     padding: 2rem 0;
     width: 100%;
     max-width: 1300px;
@@ -808,13 +813,14 @@ article.sc_type.portable {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 3em;
     padding: 5rem 5% 6rem 5%;
 }
 
 .buy__wrap {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 2em;
     width: 100%;
     max-width: 1700px;
 }
@@ -1388,7 +1394,7 @@ footer {
 
     .nav__menu a:nth-child(9) {
         margin-bottom: 0;
-    }
+    } 
 
     /*------------------------------------------ HERO SECTION ------------------------------------------*/
 
