@@ -1511,7 +1511,8 @@ footer {
     /*------------------------------------------ FOOTER ------------------------------------------*/
 
     footer {
-        height: 40vh;
+        min-height: 40vh;
+        height: auto;
     }
 
     .footer__logo {
