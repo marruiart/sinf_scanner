@@ -104,6 +104,12 @@ p {
     line-height: 2rem;
 }
 
+li {
+    max-width: 75ch;
+    padding: 0.5em 0;
+    line-height: 1.5em;
+}
+
 /* BUTTONS */
 
 .--button {
@@ -435,6 +441,21 @@ nav {
 
 .info__text {
     margin: 0 auto;
+}
+
+.info__text ul li {
+    padding-top: 1em;
+    padding-left: 1em;
+    margin-left: 2em;
+    list-style-type:circle;
+    text-align: left;
+}
+
+.info__text li::marker 
+{
+    color: var(--principal);
+    font-size: 1.1em;
+    font-weight: bolder;
 }
 
 /*------------------------------------------ TYPES ------------------------------------------*/
@@ -1088,8 +1109,11 @@ footer {
     margin: 0 auto;
 }
 
+.main__bibliography h3 {
+    padding-bottom: 1em;
+}
+
 .main__bibliography ol li {
-    padding-top: 1em;
     padding-left: 1em;
     margin-left: 2em;
     list-style-type: decimal;
@@ -1097,7 +1121,7 @@ footer {
     word-wrap: break-word;
 }
 
-li::marker 
+.main__bibliography li::marker 
 {
     color: var(--principal);
     font-size: 1.1em;
