@@ -11,6 +11,7 @@ html {
     text-decoration: none;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
 }
 
 *,
@@ -447,12 +448,11 @@ nav {
     padding-top: 1em;
     padding-left: 1em;
     margin-left: 2em;
-    list-style-type:circle;
+    list-style-type: circle;
     text-align: left;
 }
 
-.info__text li::marker 
-{
+.info__text li::marker {
     color: var(--principal);
     font-size: 1.1em;
     font-weight: bolder;
@@ -481,6 +481,7 @@ nav {
     padding: 2rem 0;
     width: 100%;
     max-width: 2000px;
+    overflow-x: hidden;
 }
 
 article.sc_type {
@@ -649,12 +650,26 @@ article.sc_type.portable {
     align-items: center;
     justify-content: center;
     gap: 2em;
-    padding: 5rem 5% 6rem 5%;
     text-align: center;
     background-color: var(--neutro);
     background-image: url(../images/background-repeat.jpg);
     background-size: 600px;
     background-attachment: fixed;
+}
+
+.install p {
+    padding: 0.5em 0;
+}
+
+.install>div {
+    background-color: #f9f9f979;
+    padding: 5rem 5% 6rem 5%;
+    height: 100%;
+    width: 100%;
+}
+
+.install>div>p {
+    margin: 0 auto;
 }
 
 .install__wrap {
@@ -717,7 +732,6 @@ article.sc_type.portable {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    gap: 1rem;
     background-color: var(--emphasis);
     min-height: 17.5rem;
     width: 100%;
@@ -738,6 +752,20 @@ article.sc_type.portable {
     display: none;
 }
 
+.install_step ul li {
+    display: inline-block;
+    padding: 1em 5% 0 5%;
+    list-style-type: circle;
+    text-align: left;
+    color: var(--dark);
+    font-style: italic;
+}
+
+.install_step ul li a:hover {
+    color: var(--light);
+}
+
+
 /*------------------------------------------ LABELS ------------------------------------------*/
 
 .labels {
@@ -747,6 +775,7 @@ article.sc_type.portable {
     padding: 2rem 5%;
     background-color: var(--dark);
     color: var(--light);
+    overflow-x: hidden;
 }
 
 .labels h2 {
@@ -947,6 +976,7 @@ article.sc_type.portable {
     color: var(--dark);
     text-align: left;
     line-height: 2.5em;
+    overflow-x: hidden;
 }
 
 .conclusion h5 {
@@ -1004,6 +1034,7 @@ footer {
     width: 100%;
     background-color: var(--dark);
     color: var(--light);
+    overflow-x: hidden;
 }
 
 .footer__wrap {
@@ -1085,12 +1116,18 @@ footer {
 
 /*------------------------------------------ BIBLIOGRAPHY & TYPES NEW PAGES ------------------------------------------*/
 
-.main__bibliography,
-.main__types {
+.main__bibliography {
     background-color: var(--neutro);
     height: 100%;
     width: 100%;
     padding: 4rem 10%;
+}
+
+.main__types {
+    background-color: var(--light);
+    height: 100%;
+    width: 100%;
+    padding: 4rem 0;
 }
 
 .main__bibliography h3,
@@ -1121,8 +1158,7 @@ footer {
     word-wrap: break-word;
 }
 
-.main__bibliography li::marker 
-{
+.main__bibliography li::marker {
     color: var(--principal);
     font-size: 1.1em;
     font-weight: bolder;
@@ -1388,7 +1424,7 @@ footer {
     .conclusion__text {
         width: 60%;
         min-width: 594px;
-        max-width: 713px;
+        max-width: 911px;
     }
 
     /*------------------------------------------ BIBLIOGRAPHY & TYPES ------------------------------------------*/
@@ -1676,11 +1712,11 @@ footer {
     /*------------------------------------------ CONCLUSION ------------------------------------------*/
 
     .conclusion {
-        height: 35rem;
+        height: 43rem;
     }
 
     .conclusion__img img {
-        margin-left: -40%;
+        margin-left: -21%;
     }
 
     /*------------------------------------------ FOOTER ------------------------------------------*/
