@@ -1,5 +1,4 @@
 function displayMenu() {
-  console.log("click");
   let x = document.getElementById("nav__menu");
   if (x.className === "nav__menu") {
     x.className += " responsive";
@@ -47,6 +46,7 @@ function displayStickyUp() {
 
   if (window.pageYOffset >= sticky) {
     stickyNav.style.display = "grid";
+    document.getElementById("nav__menu").className = "nav__menu";
   } else {
     stickyNav.style.display = "none";
   }
