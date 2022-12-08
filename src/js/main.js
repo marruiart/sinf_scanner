@@ -27,13 +27,18 @@ function displayStep(num) {
 function displayStickyNav() {
   let navMenu = document.getElementById("nav__menu");
   let stickyNav = document.getElementById("sticky");
-  let sticky = navMenu.offsetTop + 50;
+  let sticky = navMenu.offsetTop + 60;
 
-  if (window.pageYOffset >= sticky) {
+  if (window.pageYOffset >= sticky && this.oldScroll > this.scrollY) {
     stickyNav.style.display = "grid";
+    stickyNav.style.top = "-5px";
+  } else if (window.pageYOffset >= sticky && this.oldScroll < this.scrollY) {
+    stickyNav.style.display = "grid";
+    stickyNav.style.top = "-123px";
   } else {
-    stickyNav.style.display = "none";
+    stickyNav.style.top = "-400px";
   }
+  this.oldScroll = this.scrollY;
 }
 
 function displayStickyUp() {
@@ -59,6 +64,7 @@ window.onload = function () {
   }
 
   if (window.innerWidth >= 1024) {
+    let prevScrollpos = window.pageYOffset;
     window.onscroll = function () { displayStickyNav() };
   }
 };
