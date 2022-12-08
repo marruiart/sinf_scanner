@@ -775,7 +775,7 @@ article.sc_type.portable {
     padding: 2rem 5%;
     background-color: var(--dark);
     color: var(--light);
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .labels h2 {
