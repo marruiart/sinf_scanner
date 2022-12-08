@@ -24,6 +24,29 @@ function displayStep(num) {
   }
 }
 
+function displayStickyNav() {
+  let navMenu = document.getElementById("nav__menu");
+  let stickyNav = document.getElementById("sticky");
+  let sticky = navMenu.offsetTop + 50;
+
+  if (window.pageYOffset >= sticky) {
+    stickyNav.style.display = "grid";
+  } else {
+    stickyNav.style.display = "none";
+  }
+}
+
+function displayStickyUp() {
+  let stickyNav = document.getElementById("sticky_up");
+  let sticky = 500;
+
+  if (window.pageYOffset >= sticky) {
+    stickyNav.style.display = "grid";
+  } else {
+    stickyNav.style.display = "none";
+  }
+}
+
 window.onload = function () {
   if (window.innerWidth < 1024) {
     let menuIcon = document.getElementById("menu_icon");
@@ -32,5 +55,10 @@ window.onload = function () {
     for (let i = 0; i < navMenuAnchor.length; i++) {
       navMenuAnchor[i].addEventListener("click", displayMenu);
     }
+    window.onscroll = function () { displayStickyUp() };
+  }
+
+  if (window.innerWidth >= 1024) {
+    window.onscroll = function () { displayStickyNav() };
   }
 };

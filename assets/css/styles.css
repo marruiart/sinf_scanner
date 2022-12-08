@@ -1254,6 +1254,36 @@ footer {
     max-width: none;
 }
 
+/*-- STICKY UP --*/
+
+#sticky {
+    display: none;
+}
+
+#sticky_up {
+    display: none;
+    position: fixed;
+    top: 90vh;
+    right: 5%;
+    border-radius: 50%;
+    z-index: 3000;
+}
+
+#sticky_up a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: var(--principal);
+}
+
+#sticky_up a span {
+    font-size: 3em;
+}
+
 
 @media only screen and (min-width: 530px) {
 
@@ -1521,8 +1551,7 @@ footer {
         padding: 0.5rem 5%;
     }
 
-    header,
-    #sticky__header {
+    header {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -1530,33 +1559,14 @@ footer {
         text-align: center;
     }
 
-    header a img,
-    #sticky__header a img {
+    header a img {
         width: 200px;
         padding: 2rem 1em;
     }
 
     /*------------------------------------------ NAV MENU ------------------------------------------*/
 
-    #sticky {
-        display: none;
-        /*ARREGLAR*/
-        grid-template-columns: repeat(4, 1fr);
-        width: 100%;
-        position: fixed;
-        background-color: #f9f9f9c1;
-    }
-
-    #sticky__nav {
-        grid-column: 2 / span 3;
-    }
-
-    #sticky__header {
-        grid-column: 1;
-    }
-
-    nav,
-    #sticky__nav {
+    nav {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1564,8 +1574,7 @@ footer {
         width: 100%;
     }
 
-    .nav__menu,
-    .sticky__nav__menu {
+    .nav__menu {
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -1578,8 +1587,7 @@ footer {
         display: none;
     }
 
-    .nav__menu a:not(.icon),
-    .sticky__nav__menu__a {
+    .nav__menu a:not(.icon) {
         display: block;
         height: auto;
         width: auto;
@@ -1588,8 +1596,7 @@ footer {
         flex-basis: 24%;
     }
 
-    .nav__menu a:hover,
-    .sticky__nav__menu__a:hover {
+    .nav__menu a:hover {
         background-color: var(--dark);
         color: var(--light);
     }
@@ -1824,6 +1831,67 @@ footer {
         text-align: right;
     }
 
+    /****** STICKY ******/
+
+    #sticky_up {
+        display: none;
+    }
+
+    #sticky {
+        position: fixed;
+        display: none;
+        grid-template-columns: repeat(4, 1fr);
+        width: 100%;
+        margin-top: -5px;
+        background-color: #f9f9f9cd;
+        z-index: 300;
+    }
+
+    #sticky__header {
+        grid-column: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #sticky__header a img {
+        width: 200px;
+        padding: 2rem 1em;
+    }
+
+    #sticky__nav {
+        grid-column: 2 / span 3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        width: 100%;
+    }
+
+    .sticky__nav__menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .sticky__nav__menu__a {
+        display: block;
+        height: auto;
+        width: auto;
+        margin-bottom: 0;
+        padding: 0.5rem 1.5em;
+        flex-basis: 24%;
+    }
+
+    .sticky__nav__menu__a:hover {
+        background-color: var(--dark);
+        color: var(--light);
+    }
 
 }
 
@@ -1833,7 +1901,8 @@ footer {
         justify-content: left;
     }
 
-    .nav__menu a:not(.icon) {
+    .nav__menu a:not(.icon),
+    .sticky__nav__menu__a {
         flex-basis: auto;
     }
 
