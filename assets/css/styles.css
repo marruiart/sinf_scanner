@@ -9,6 +9,8 @@ html {
     padding: 0;
     list-style-type: none;
     text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 *,
@@ -161,7 +163,6 @@ p {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(7, auto);
     width: 100%;
-    min-height: 100vh;
 
     grid-row: 4;
     grid-column: span 4;
@@ -1067,6 +1068,7 @@ footer {
     background-color: var(--neutro);
     height: 100%;
     width: 100%;
+    padding: 4rem 10%;
 }
 
 .main__bibliography h3,
@@ -1075,17 +1077,41 @@ footer {
     text-align: center;
 }
 
+/*-- BIBLIOGRAPHY PAGE --*/
+
 .main__bibliography__biblio,
-.main__bibliography__img,
+.main__bibliography__img {
+    width: 100%;
+    max-width: 1000px;
+    padding: 2rem 0;
+    margin: 0 auto;
+}
+
+.main__bibliography ol li {
+    padding-top: 1em;
+    padding-left: 1em;
+    margin-left: 2em;
+    list-style-type: decimal;
+    color: var(--dark);
+    word-wrap: break-word;
+}
+
+li::marker 
+{
+    color: var(--principal);
+    font-size: 1.1em;
+    font-weight: bolder;
+}
+
+/*-- TYPES PAGE --*/
+
 .main__types__wrap,
 .main__types__wrap__article {
     width: 100%;
     max-width: 1500px;
-    padding: 5rem 10%;
+    padding: 2rem 0;
     margin: 0 auto;
 }
-
-/*-- TYPES PAGE --*/
 
 .types_page {
     text-align: center;
@@ -1217,14 +1243,14 @@ footer {
 
     /*-- TYPES PAGE --*/
 
-     .sc_types_page__imgwrap h2 {
+    .sc_types_page__imgwrap h2 {
         padding: 100% 5% 50% 5%;
         transform: translateY(-57%);
         background-color: #232c3ba4;
         color: white;
         font-weight: normal;
         font-size: 2rem;
-    } 
+    }
 
 }
 
@@ -1670,73 +1696,73 @@ footer {
         text-align: left;
     }
 
-        /*-- TYPES PAGE --*/
+    /*-- TYPES PAGE --*/
 
-        .types_page {
-            display: flex;
-            flex-direction: column;
-            gap: 3em;
-        }
-    
-        .types_page__wrap {
-            row-gap: 6em;
-            column-gap: 3em;
-            margin: 0 auto;
-        }
-    
-        .sc_types_page {
-            display: flex;
-            min-height: 18rem;
-        }
-    
-        .sc_types_page__imgwrap {
-            height: 100%;
-            width: 40%;
-            padding-bottom: 0;
-        }
-    
-        .sc_types_page__imgwrap h2 {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
-            width: 100%;
-            padding: 0 5%;
-            transform: none;
-            background-color: #232c3ba4;
-            color: white;
-            font-weight: normal;
-        }
-    
-        .sc_types_page__imgwrap.--flatbed {
-            background-position-x: 70%;
-        }
-        
-        .sc_types_page__imgwrap.--portable {
-            background-position-x: 30%;
-        }
-    
-        .sc_types_page__imgwrap.--even {
-            right: 0;
-        }
-    
-        .sc_types_page__imgwrap.--odd {
-            left: 0;
-        }
-    
-        .sc_types_page__text {
-            width: 70%;
-            background-color: var(--neutro);
-        }
-    
-        .sc_types_page__text.--odd {
-            text-align: left;
-        }
-    
-        .sc_types_page__text.--even {
-            text-align: right;
-        }
-    
+    .types_page {
+        display: flex;
+        flex-direction: column;
+        gap: 3em;
+    }
+
+    .types_page__wrap {
+        row-gap: 6em;
+        column-gap: 3em;
+        margin: 0 auto;
+    }
+
+    .sc_types_page {
+        display: flex;
+        min-height: 18rem;
+    }
+
+    .sc_types_page__imgwrap {
+        height: 100%;
+        width: 40%;
+        padding-bottom: 0;
+    }
+
+    .sc_types_page__imgwrap h2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        padding: 0 5%;
+        transform: none;
+        background-color: #232c3ba4;
+        color: white;
+        font-weight: normal;
+    }
+
+    .sc_types_page__imgwrap.--flatbed {
+        background-position-x: 70%;
+    }
+
+    .sc_types_page__imgwrap.--portable {
+        background-position-x: 30%;
+    }
+
+    .sc_types_page__imgwrap.--even {
+        right: 0;
+    }
+
+    .sc_types_page__imgwrap.--odd {
+        left: 0;
+    }
+
+    .sc_types_page__text {
+        width: 70%;
+        background-color: var(--neutro);
+    }
+
+    .sc_types_page__text.--odd {
+        text-align: left;
+    }
+
+    .sc_types_page__text.--even {
+        text-align: right;
+    }
+
 
 }
 
